@@ -17,9 +17,13 @@ To recreate this study:
 Run the individual raw data files through the following codes in Codes/RawDataProcessingCodes:
 
   a. Atmos_sensor_data (10.csv/50.csv/110.csv) -> Atmos_cleaner.py
+  
   b. Other_sensor_data -> sensor_cleaner.py
+  
   c. Survey_data -> participant_response_cleaner.py
+  
   d. HR_data -> HR_cleaner.py
+  
   e. BG_data -> BG_cleaner.py
   
 Once the initial processing is done, the next step is combining the files.
