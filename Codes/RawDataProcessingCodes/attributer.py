@@ -23,17 +23,17 @@ b = pd.read_csv('b.csv', sep=',', index_col=0)
 
 
 # gender
-a['Gender'] = 'male'
-b['Gender'] = 'female'
+a['Gender'] = '<gender1>'
+b['Gender'] = '<gender2>'
 
 # Region
-a['Country'] = 'Middle East'
-b['Country'] = 'India'
+a['Country'] = '<place1>'
+b['Country'] = '<place2>'
 
 
 # LAB
-a['Lab'] = 'Hogwarts'
-b['Lab'] = 'Narnia'
+a['Lab'] = '<Lab1>'
+b['Lab'] = '<Lab2>'
 
 
 # Time in this Country

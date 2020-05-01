@@ -1,8 +1,6 @@
 # ------------------------------------------------------------------------------------------------
 # Filename:
 #        Atmos_cleaner
-# Author:
-#        Jermy Thomas
 #
 # Description:
 #        Code to convert raw Atmos Data into a csv file with Date Stamps from

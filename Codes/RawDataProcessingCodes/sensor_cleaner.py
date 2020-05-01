@@ -1,8 +1,6 @@
 # ------------------------------------------------------------------------------------------------
 # Filename:
 #        sensor_cleaner
-# Author:
-#        Jermy Thomas
 #
 # Description:
 #        Code to clean sensor data and convert into a csv file with Date Stamps from
@@ -11,7 +9,7 @@
 # Credits:
 #
 # Requirements:
-#      
+#
 #
 # Notes:
 #

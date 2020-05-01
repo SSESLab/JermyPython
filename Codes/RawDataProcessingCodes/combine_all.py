@@ -1,21 +1,6 @@
-# ------------------------------------------------------------------------------------------------
-# Filename:
-#        combine_all
-# Author:
-#        Jermy Thomas
-#
 # Description:
 #        Code to combine all data to one file
-#
-# Credits:
-#
-# Requirements:
-#
-# Notes:
-#
-# Todo:
-#
-# ------------------------------------------------------------------------------------------------
+
 #
 # Import <stuff>
 import os
