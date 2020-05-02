@@ -27,17 +27,13 @@ library(ggplot2)
 library(tidyverse)
 
 
-# setup start date and time
+# For all individuals
 
-my_data <- read.csv("All.csv")
+my_data <- read.csv("All.csv") # Read csv
      
 list_of_subjects <- unique(my_data$Subject)
 
-my_data <- read.csv("All.csv")    
-
-
-head(my_data, 6)
-
+#Get just the variables that are required
 my_data <- my_data[, c( "Clo",
                         "General.Sensation", 
                         "HR", 
@@ -46,29 +42,15 @@ my_data <- my_data[, c( "Clo",
                         "Temp.1", 
                         "V_a_110", 
                         "V_a_50")]
+
+# Change names of columns
 names(my_data)[names(my_data)=="General.Sensation"] <- "Thermal Sensation"
 names(my_data)[names(my_data)=="Temp.1"] <- "Temperature"
 
-# my_data %>% 
-#         rename("Clo",
-#         "General.Sensation" = "Thermal Sensation", 
-#         "HR", 
-#         "MRT", 
-#         "RH", 
-#         "T_db_110", 
-#         "T_db_50", 
-#         "V_a_110", 
-#         "V_a_50"
-#         )
-
-head(my_data, 6)
-
-res <- cor(my_data, use = "complete.obs")
-
-round(res, 2)
-
+#Get correlation
 res2 <- rcorr(as.matrix(my_data))
 
+# Flatten to get r and p value
 flattenCorrMatrix(res2$r, res2$P)
 
 Picture_name = paste("Corr_", 
@@ -76,8 +58,7 @@ Picture_name = paste("Corr_",
                      sep = "", 
                      collapse = NULL)
 
-Title_name = paste("Variable correlations for person: ", 
-                   person, 
+Title_name = paste("For everyone!",
                    sep = "", 
                    collapse = NULL)
 
@@ -95,20 +76,18 @@ corrplot(res2$r,
          tl.col = "black", 
          tl.srt = 45, 
          p.mat = res2$P, 
-         sig.level = 0.1, 
+         sig.level = 0.05, 
          insig = "pch")
 
 dev.off()
 
-
+# Now do this for everyone in the csv individually 
 for (person in list_of_subjects){
 
      my_data <- read.csv("All.csv")    
      
           
      my_data = my_data[my_data$Subject == person,]
-     
-     head(my_data, 6)
      
      my_data <- my_data[, c( "Clo",
                              "General.Sensation", 
@@ -120,18 +99,6 @@ for (person in list_of_subjects){
                              "V_a_50")]
      names(my_data)[names(my_data)=="General.Sensation"] <- "Thermal Sensation"
      names(my_data)[names(my_data)=="Temp.1"] <- "Temperature"
-     
-        # my_data %>% 
-        #         rename("Clo",
-        #         "General.Sensation" = "Thermal Sensation", 
-        #         "HR", 
-        #         "MRT", 
-        #         "RH", 
-        #         "T_db_110", 
-        #         "T_db_50", 
-        #         "V_a_110", 
-        #         "V_a_50"
-        #         )
 
      head(my_data, 6)
      
@@ -168,39 +135,12 @@ for (person in list_of_subjects){
               tl.col = "black", 
               tl.srt = 45, 
               p.mat = res2$P, 
-              sig.level = 0.1, 
+              sig.level = 0.05, 
               insig = "pch")
      
      dev.off()
      
-     # scatter_name = paste("Scatter_", 
-     #                      person ,
-     #                      ".png", 
-     #                      sep = "", 
-     #                      collapse = NULL)
-     # 
-     # png(filename=scatter_name, 
-     #     width = 960, 
-     #     height = 960,
-     #     pointsize = 18, 
-     #     bg = "white",)
-     # 
-     # labelnames = colnames(res2$r)
-     # 
-     # 
-     # correlations <- res2$r[,"General.Sensation"]
-     # 
-     # 
-     # 
-     # # plot(correlations,
-     # #      xaxt="n",
-     # #      ylim=c(-1,1),
-     # #      pch=19) +
-     # #      theme_ipsum()
-     # 
-     # axis(1, at = 1:9, labels = labelnames)
-     # 
-     # dev.off()
+
 
 }
 
