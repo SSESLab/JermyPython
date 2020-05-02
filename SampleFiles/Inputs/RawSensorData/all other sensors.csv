@@ -1,2 +1,3 @@
 =~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2019.03.18 10:10:09 =~=~=~=~=~=~=~=~=~=~=~=,,,,,,,,,,
-<Date>,<time>,<Float>,O-,<Float>,<Float>,<Float>,<Float>,<Float>,<Float>,<Float>
+ 'Empty', 'Clock Time', 'Clock Temperature', 'CO2 sensor O', 'CO2 sensor voltage', 'CO2 sensor co2 conc', 'BMP Temp', 'BMP Pressure', 'BMP height above sea level', 'SHT RH', 'SHT Temp"
+,<Date time>,<Float>,O-,<Float>,<Float>,<Float>,<Float>,<Float>,<Float>,<Float>
