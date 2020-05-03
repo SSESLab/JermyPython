@@ -38,7 +38,7 @@ Once the initial processing is done, the next step is combining the files.
 
 ### 5. Run the final processing files:
 
-To create the linear relationship heatmaps, run the 'All.csv' file through https://github.com/SSESLab/JermyR/blob/master/corr_plots.R. 
+To create the linear relationship heatmaps, run the 'All.csv' file through https://github.com/SSESLab/JermyPython/blob/master/Codes/FinalProcessingCodes/corr_plots.R. 
 
 To create the non-linear relationship bar charts, run 'All.csv' through https://github.com/SSESLab/JermyPython/blob/master/Codes/FinalProcessingCodes/Chapter_3.ipynb.
   
