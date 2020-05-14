@@ -1,4 +1,6 @@
-## Codes and sample files for replicating the results in Chapter 3 of Jermy Thomas' MS Thesis
+# Codes and sample files for replicating the results in Jermy Thomas' MS Thesis
+
+## Codes and sample files for replicating the results in Chapter 3
 
 To recreate this study:
 
@@ -42,3 +44,14 @@ To create the linear relationship heatmaps, run the 'All.csv' file through https
 
 To create the non-linear relationship bar charts, run 'All.csv' through https://github.com/SSESLab/JermyPython/blob/master/Codes/FinalProcessingCodes/Chapter_3.ipynb.
   
+## Codes and sample files for replicating the results in Chapter 4
+
+To recreate the results:
+
+### 1. Input datafile: 
+This section uses the same datafile that was generated in Chapter 3. 
+(Sample file: /SampleFiles/Inputs/ProcessedOutput/All_Sample.csv)
+
+### 2. Run the code using this datafile: 
+This iPython notebook uses this datafile to recreate the results in Chapter 4:
+https://github.com/SSESLab/JermyPython/blob/master/Codes/FinalProcessingCodes/Chapter_4.ipynb
